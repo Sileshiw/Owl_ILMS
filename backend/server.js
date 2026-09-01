@@ -9,6 +9,7 @@ const subjectsRoutes = require("./routes/subjectsRoutes");
 const bookSubjectsRoutes = require("./routes/bookSubjectsRoutes");
 const itemsRoutes = require("./routes/itemsRoutes");
 const patronsRoutes = require("./routes/patronsRoutes");
+const circulationRoutes = require("./routes/circulationRoutes");
 const app = express();
 
 app.use(cors());
@@ -20,6 +21,7 @@ app.use("/api/subjects", subjectsRoutes);
 app.use("/api/book-subjects", bookSubjectsRoutes);
 app.use("/api/items", itemsRoutes);
 app.use("/api/patrons", patronsRoutes);
+app.use("/api/circulation", circulationRoutes);
 app.get("/", (req, res) => {
     res.json({
         message: "ILMS Backend API is running"
